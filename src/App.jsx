@@ -2,8 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import About from "./Component/About.jsx";
 import Projects from "./Component/Projects.jsx";
-
-import Cursor from "./Cursor/Cursor.jsx";
+import Cursor from "./Cursor/cursor.jsx";
 import  Home from "./Component/Home.jsx";
 import Header from './Component/Header';
 import Footer from './Component/Footer';
