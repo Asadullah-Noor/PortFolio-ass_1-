@@ -1,0 +1,86 @@
+/* Put your original CSS here. The following are the key rules needed. */
+
+/* base reset for cursor elements */
+.cursor,
+.cursor2,
+.cursor3 {
+  position: fixed;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  left: -100px;
+  top: 50%;
+  z-index: 9999;
+}
+
+/* small solid center dot */
+.cursor {
+  background-color:rgb(133, 228, 0);
+  height: 8px;
+  width: 8px;
+}
+
+/* middle and outer layers */
+.cursor2,
+.cursor3 {
+  height: 50px;
+  width: 50px;
+  transition: all 200ms ease-out;
+  background-position: center;
+  background-size: 0 0;
+}
+
+.cursor2 {
+  border: 2px solid #12a8a8;
+  box-shadow: 0 0 12px rgba(16, 39, 112, 0.2);
+}
+
+/* hover state expands to show image-preview rectangle */
+.cursor2.hover,
+.cursor3.hover {
+  height: 220px;
+  width: 320px;
+  border: none;
+  border-radius: 8px;
+}
+
+/* different body classes control the image used */
+body.img-1-wrap .cursor2,
+body.img-1-wrap .cursor3 {
+  background-image: url('https://assets.codepen.io/1462889/sl1.jpg');
+  background-size: cover;
+}
+
+body.img-2-wrap .cursor2,
+body.img-2-wrap .cursor3 {
+  background-image: url('https://assets.codepen.io/1462889/sl2.jpg');
+  background-size: cover;
+}
+
+body.img-3-wrap .cursor2,
+body.img-3-wrap .cursor3 {
+  background-image: url('https://assets.codepen.io/1462889/sl3.jpg');
+  background-size: cover;
+}
+
+body.img-4-wrap .cursor2,
+body.img-4-wrap .cursor3 {
+  background-image: url('https://assets.codepen.io/1462889/sl4.jpg');
+  background-size: cover;
+}
+
+/* logo wrap small circle */
+body.logo-wrap .cursor2,
+body.logo-wrap .cursor3 {
+  background-image: none;
+  height: 36px;
+  width: 36px;
+}
+body.logo-wrap .cursor2.hover,
+body.logo-wrap .cursor3.hover {
+  height: 36px;
+  width: 36px;
+  transform: scale(2) translateX(-25%) translateY(-25%);
+  border-radius: 50%;
+  background-color: #ffeba7;
+}
